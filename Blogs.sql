@@ -17,15 +17,15 @@ CREATE TABLE Authors (
 
 CREATE TABLE Tags (
     id int not null auto_increment primary key,
-    name varchar(50) not null,
-);
+    name varchar(50) not null
+    );
 
 CREATE TABLE BlogTags (
     blogid int not null,
     tagid int not null
 );
 
-CREATE PROCEDURE spBlogTags @blogid int
+CREATE PROCEDURE spBlogTags @blogid int not null
 AS
 SELECT * FROM BlogTags
 GO;
